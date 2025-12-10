@@ -1,0 +1,23 @@
+{
+    "app_name": "WiFi Purple GUI",
+    "version": "1.0",
+
+    "paths": {
+        "assets_icons": "assets/icons",
+        "assets_images": "assets/images",
+        "assets_themes": "assets/themes"
+    },
+
+    "tools": {
+        "scan": "Wifi-Purple/scan.py",
+        "deauth": "Wifi-Purple/deauth.py",
+        "evil_twin": "Wifi-Purple/evil_twin.py",
+        "handshake": "Wifi-Purple/handshake.py"
+    },
+
+    "settings": {
+        "default_interface": "wlan0",
+        "monitor_mode": true,
+        "auto_refresh_scan": 5
+    }
+}

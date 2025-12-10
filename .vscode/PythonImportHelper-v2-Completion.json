@@ -1,0 +1,436 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "check_call",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "isExtraImport": true,
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "customtkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "customtkinter",
+        "description": "customtkinter",
+        "detail": "customtkinter",
+        "documentation": {}
+    },
+    {
+        "label": "ScanPage",
+        "importPath": "gui.scan_page",
+        "description": "gui.scan_page",
+        "isExtraImport": true,
+        "detail": "gui.scan_page",
+        "documentation": {}
+    },
+    {
+        "label": "ScanPage",
+        "importPath": "gui.scan_page",
+        "description": "gui.scan_page",
+        "isExtraImport": true,
+        "detail": "gui.scan_page",
+        "documentation": {}
+    },
+    {
+        "label": "DeauthPage",
+        "importPath": "gui.deauth_page",
+        "description": "gui.deauth_page",
+        "isExtraImport": true,
+        "detail": "gui.deauth_page",
+        "documentation": {}
+    },
+    {
+        "label": "DeauthPage",
+        "importPath": "gui.deauth_page",
+        "description": "gui.deauth_page",
+        "isExtraImport": true,
+        "detail": "gui.deauth_page",
+        "documentation": {}
+    },
+    {
+        "label": "EvilTwinPage",
+        "importPath": "gui.evil_twin_page",
+        "description": "gui.evil_twin_page",
+        "isExtraImport": true,
+        "detail": "gui.evil_twin_page",
+        "documentation": {}
+    },
+    {
+        "label": "EvilTwinPage",
+        "importPath": "gui.evil_twin_page",
+        "description": "gui.evil_twin_page",
+        "isExtraImport": true,
+        "detail": "gui.evil_twin_page",
+        "documentation": {}
+    },
+    {
+        "label": "HandshakePage",
+        "importPath": "gui.handshake_page",
+        "description": "gui.handshake_page",
+        "isExtraImport": true,
+        "detail": "gui.handshake_page",
+        "documentation": {}
+    },
+    {
+        "label": "HandshakePage",
+        "importPath": "gui.handshake_page",
+        "description": "gui.handshake_page",
+        "isExtraImport": true,
+        "detail": "gui.handshake_page",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "Fore",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "Style",
+        "importPath": "colorama",
+        "description": "colorama",
+        "isExtraImport": true,
+        "detail": "colorama",
+        "documentation": {}
+    },
+    {
+        "label": "ScanController",
+        "importPath": "controllers.scan_controller",
+        "description": "controllers.scan_controller",
+        "isExtraImport": true,
+        "detail": "controllers.scan_controller",
+        "documentation": {}
+    },
+    {
+        "label": "DeauthController",
+        "importPath": "controllers.deauth_controller",
+        "description": "controllers.deauth_controller",
+        "isExtraImport": true,
+        "detail": "controllers.deauth_controller",
+        "documentation": {}
+    },
+    {
+        "label": "EvilTwinController",
+        "importPath": "controllers.evil_twin_controller",
+        "description": "controllers.evil_twin_controller",
+        "isExtraImport": true,
+        "detail": "controllers.evil_twin_controller",
+        "documentation": {}
+    },
+    {
+        "label": "HandshakeController",
+        "importPath": "controllers.handshake_controller",
+        "description": "controllers.handshake_controller",
+        "isExtraImport": true,
+        "detail": "controllers.handshake_controller",
+        "documentation": {}
+    },
+    {
+        "label": "MainPage",
+        "importPath": "gui.main_app",
+        "description": "gui.main_app",
+        "isExtraImport": true,
+        "detail": "gui.main_app",
+        "documentation": {}
+    },
+    {
+        "label": "DeauthController",
+        "kind": 6,
+        "importPath": "controllers.deauth_controller",
+        "description": "controllers.deauth_controller",
+        "peekOfCode": "class DeauthController:\n    def __init__(self):\n        config_path = os.path.join(os.path.dirname(__file__), \"..\", \"config.json\")\n        with open(config_path, \"r\", encoding=\"utf-8\") as file:\n            self.config = json.load(file)\n        self.tool_path = self.config[\"tools\"][\"deauth\"]\n    def run_deauth(self, interface, target_bssid, count=50):\n        \"\"\"\n        Thực thi tấn công deauthentication\n        \"\"\"",
+        "detail": "controllers.deauth_controller",
+        "documentation": {}
+    },
+    {
+        "label": "EvilTwinController",
+        "kind": 6,
+        "importPath": "controllers.evil_twin_controller",
+        "description": "controllers.evil_twin_controller",
+        "peekOfCode": "class EvilTwinController:\n    def __init__(self):\n        config_path = os.path.join(os.path.dirname(__file__), \"..\", \"config.json\")\n        with open(config_path, \"r\", encoding=\"utf-8\") as file:\n            self.config = json.load(file)\n        self.tool_path = self.config[\"tools\"][\"evil_twin\"]\n    def run_evil_twin(self, interface, ssid_fake):\n        \"\"\"\n        Khởi chạy tấn công Evil Twin – tạo AP giả\n        \"\"\"",
+        "detail": "controllers.evil_twin_controller",
+        "documentation": {}
+    },
+    {
+        "label": "HandshakeController",
+        "kind": 6,
+        "importPath": "controllers.handshake_controller",
+        "description": "controllers.handshake_controller",
+        "peekOfCode": "class HandshakeController:\n    def __init__(self):\n        config_path = os.path.join(os.path.dirname(__file__), \"..\", \"config.json\")\n        with open(config_path, \"r\", encoding=\"utf-8\") as file:\n            self.config = json.load(file)\n        self.tool_path = self.config[\"tools\"][\"handshake\"]\n    def capture_handshake(self, interface, target_bssid, channel):\n        \"\"\"\n        Bắt gói handshake WPA/WPA2\n        \"\"\"",
+        "detail": "controllers.handshake_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ScanController",
+        "kind": 6,
+        "importPath": "controllers.scan_controller",
+        "description": "controllers.scan_controller",
+        "peekOfCode": "class ScanController:\n    def __init__(self):\n        config_path = os.path.join(os.path.dirname(__file__), \"..\", \"config.json\")\n        with open(config_path, \"r\", encoding=\"utf-8\") as file:\n            self.config = json.load(file)\n        self.tool_path = self.config[\"tools\"][\"scan\"]\n    def scan_networks(self, interface):\n        \"\"\"\n        Quét mạng Wi-Fi xung quanh\n        \"\"\"",
+        "detail": "controllers.scan_controller",
+        "documentation": {}
+    },
+    {
+        "label": "DeauthPage",
+        "kind": 6,
+        "importPath": "gui.deauth_page",
+        "description": "gui.deauth_page",
+        "peekOfCode": "class DeauthPage(ctk.CTkFrame):\n    def __init__(self, parent):\n        super().__init__(parent)\n        title = ctk.CTkLabel(self, text=\"Deauthentication Attack\", font=(\"Roboto\", 22, \"bold\"))\n        title.pack(pady=20)\n        self.bssid_entry = ctk.CTkEntry(self, placeholder_text=\"BSSID\")\n        self.bssid_entry.pack(pady=10)\n        self.channel_entry = ctk.CTkEntry(self, placeholder_text=\"Channel\")\n        self.channel_entry.pack(pady=10)\n        self.start_button = ctk.CTkButton(self, text=\"Start Deauth\", width=200, command=self.start_attack)",
+        "detail": "gui.deauth_page",
+        "documentation": {}
+    },
+    {
+        "label": "EvilTwinPage",
+        "kind": 6,
+        "importPath": "gui.evil_twin_page",
+        "description": "gui.evil_twin_page",
+        "peekOfCode": "class EvilTwinPage(ctk.CTkFrame):\n    def __init__(self, parent):\n        super().__init__(parent)\n        title = ctk.CTkLabel(self, text=\"Evil Twin Attack\", font=(\"Roboto\", 22, \"bold\"))\n        title.pack(pady=20)\n        self.ssid_entry = ctk.CTkEntry(self, placeholder_text=\"Fake SSID\")\n        self.ssid_entry.pack(pady=10)\n        self.channel_entry = ctk.CTkEntry(self, placeholder_text=\"Channel\")\n        self.channel_entry.pack(pady=10)\n        self.start_button = ctk.CTkButton(self, text=\"Start Evil Twin\", command=self.start_evil_twin)",
+        "detail": "gui.evil_twin_page",
+        "documentation": {}
+    },
+    {
+        "label": "HandshakePage",
+        "kind": 6,
+        "importPath": "gui.handshake_page",
+        "description": "gui.handshake_page",
+        "peekOfCode": "class HandshakePage(ctk.CTkFrame):\n    def __init__(self, parent):\n        super().__init__(parent)\n        title = ctk.CTkLabel(self, text=\"Handshake Capture\", font=(\"Roboto\", 22, \"bold\"))\n        title.pack(pady=20)\n        self.bssid_entry = ctk.CTkEntry(self, placeholder_text=\"Target BSSID\")\n        self.bssid_entry.pack(pady=10)\n        self.channel_entry = ctk.CTkEntry(self, placeholder_text=\"Channel\")\n        self.channel_entry.pack(pady=10)\n        self.start_button = ctk.CTkButton(self, text=\"Start Capture\", command=self.start_capture)",
+        "detail": "gui.handshake_page",
+        "documentation": {}
+    },
+    {
+        "label": "MainApp",
+        "kind": 6,
+        "importPath": "gui.main_app",
+        "description": "gui.main_app",
+        "peekOfCode": "class MainApp(ctk.CTk):\n    def __init__(self):\n        super().__init__()\n        self.title(\"Wifi Purple GUI\")\n        self.geometry(\"1100x650\")\n        ctk.set_appearance_mode(\"dark\")\n        ctk.set_default_color_theme(\"blue\")\n        # ============================\n        #  Sidebar\n        # ============================",
+        "detail": "gui.main_app",
+        "documentation": {}
+    },
+    {
+        "label": "ScanPage",
+        "kind": 6,
+        "importPath": "gui.scan_page",
+        "description": "gui.scan_page",
+        "peekOfCode": "class ScanPage(ctk.CTkFrame):\n    def __init__(self, parent):\n        super().__init__(parent)\n        title = ctk.CTkLabel(self, text=\"WiFi Scan\", font=(\"Roboto\", 22, \"bold\"))\n        title.pack(pady=20)\n        self.scan_button = ctk.CTkButton(\n            self, text=\"Start Scan\", width=200,\n            command=self.start_scan\n        )\n        self.scan_button.pack(pady=10)",
+        "detail": "gui.scan_page",
+        "documentation": {}
+    },
+    {
+        "label": "scan_networks",
+        "kind": 2,
+        "importPath": "Wifi-Purple.scan",
+        "description": "Wifi-Purple.scan",
+        "peekOfCode": "def scan_networks(interface):\n    \"\"\"\n    Sử dụng airodump-ng để quét các mạng Wi-Fi.\n    \"\"\"\n    if not interface:\n        print(\"[ERROR] Vui lòng cung cấp interface mạng (vd: wlan0mon).\")\n        return\n    print(f\"[*] Bắt đầu quét mạng trên interface: {interface}\")\n    print(\"[INFO] Nhấn CTRL + C để dừng quét.\")\n    # Đảm bảo interface ở chế độ monitor",
+        "detail": "Wifi-Purple.scan",
+        "documentation": {}
+    },
+    {
+        "label": "banner",
+        "kind": 2,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "def banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ \n| |  | |_   _|  ___|_   _|    | ___ \\ | | | ___ \\ ___ \\ |    |  ___|\n| |  | | | | | |_    | |______| |_/ / | | | |_/ / |_/ / |    | |__  \n| |/\\| | | | |  _|   | |______|  __/| | | |    /|  __/| |    |  __| \n\\  /\\  /_| |_| |    _| |_     | |   | |_| | |\\ \\| |   | |____| |___ \n \\/  \\/ \\___/\\_|    \\___/     \\_|    \\___/\\_| \\_\\_|   \\_____/\\____/ \n\t               \\033[1;35m🌐--\\033[1;35mBy EmreKybs\\033[1;35m--🌐\\033[0m\n                 \\033[1;35m\\033[1;34mA Automate script for wifi hacking\\033[1;35m\\033[0m",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "slowly",
+        "kind": 2,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "def slowly(s):\n    try:\n        time.sleep(1)\n        for char in s + '\\n':\n            sys.stdout.write(char)\n            sys.stdout.flush()\n            time.sleep(7. / 100)\n        print('\\n')\n        time.sleep(2)\n    except KeyboardInterrupt:",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 2,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "def menu():\n    menu_items = [\n        \"Start Monitor Mode\",\n        \"Stop Monitor Mode\",\n        \"View Interfaces\",\n        \"Restart Network\",\n        \"Scan Networks\",\n        \"Capture Handshake\",\n        \"Crack the Password\",\n        \"WPS Attack (Bully)\",",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "bye",
+        "kind": 2,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "def bye():\n    print(\"\"\"\n \\033[1;37m------------------------------------------------------\\033[0m   \n   \t  \\033[1;35m Thank you for using WIFI-PURPLE \\033[0m\n   \t       \t    \\033[1;36m GOOD LUCK!\\033[0m\n             \\033[1;32m https://github.com/emrekybs \\033[0m\n \\033[1;37m------------------------------------------------------\\033[0m \n\"\"\"+WHITE + Style.NORMAL)\n############################################################\nprint(\" \\033[1;34mSelect Option: \")",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "RED",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "RED = '\\033[1;31m'\nBLUE = '\\033[1;34m'\nGREEN = '\\033[1;32m'\nYELLOW = '\\033[1;33m'\nMAGENTA = '\\033[1;35m'\nWHITE = '\\033[1;37m'\nCYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "BLUE",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "BLUE = '\\033[1;34m'\nGREEN = '\\033[1;32m'\nYELLOW = '\\033[1;33m'\nMAGENTA = '\\033[1;35m'\nWHITE = '\\033[1;37m'\nCYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "GREEN = '\\033[1;32m'\nYELLOW = '\\033[1;33m'\nMAGENTA = '\\033[1;35m'\nWHITE = '\\033[1;37m'\nCYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "YELLOW",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "YELLOW = '\\033[1;33m'\nMAGENTA = '\\033[1;35m'\nWHITE = '\\033[1;37m'\nCYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ ",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "MAGENTA",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "MAGENTA = '\\033[1;35m'\nWHITE = '\\033[1;37m'\nCYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ \n| |  | |_   _|  ___|_   _|    | ___ \\ | | | ___ \\ ___ \\ |    |  ___|",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "WHITE",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "WHITE = '\\033[1;37m'\nCYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ \n| |  | |_   _|  ___|_   _|    | ___ \\ | | | ___ \\ ___ \\ |    |  ___|\n| |  | | | | | |_    | |______| |_/ / | | | |_/ / |_/ / |    | |__  ",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "CYAN",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "CYAN = '\\033[1;36m'\nPURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ \n| |  | |_   _|  ___|_   _|    | ___ \\ | | | ___ \\ ___ \\ |    |  ___|\n| |  | | | | | |_    | |______| |_/ / | | | |_/ / |_/ / |    | |__  \n| |/\\| | | | |  _|   | |______|  __/| | | |    /|  __/| |    |  __| ",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "PURPLE",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "PURPLE = '\\033[1;35m'\nEND = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ \n| |  | |_   _|  ___|_   _|    | ___ \\ | | | ___ \\ ___ \\ |    |  ___|\n| |  | | | | | |_    | |______| |_/ / | | | |_/ / |_/ / |    | |__  \n| |/\\| | | | |  _|   | |______|  __/| | | |    /|  __/| |    |  __| \n\\  /\\  /_| |_| |    _| |_     | |   | |_| | |\\ \\| |   | |____| |___ ",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "END",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "END = '\\033[0m'\nos.system(\"clear\")\ndef banner():\n    print(\"\\033[1;35m\" + \"\"\"\n _    _ ___________ _____     ______ _   _____________ _      _____ \n| |  | |_   _|  ___|_   _|    | ___ \\ | | | ___ \\ ___ \\ |    |  ___|\n| |  | | | | | |_    | |______| |_/ / | | | |_/ / |_/ / |    | |__  \n| |/\\| | | | |  _|   | |______|  __/| | | |    /|  __/| |    |  __| \n\\  /\\  /_| |_| |    _| |_     | |   | |_| | |\\ \\| |   | |____| |___ \n \\/  \\/ \\___/\\_|    \\___/     \\_|    \\___/\\_| \\_\\_|   \\_____/\\____/ ",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "WP",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "WP = int(input(\" \\033[1;32m>> \\033[1;37m\"))\nif WP == 1:\n\tos.system(\"clear\")\n\tbanner()\n\tprint(\" \\033[1;37mEnter the interface: (\\033[0;37mwlan\\033[0;31m0 \\033[1;37m| \\033[0;37mwlan\\033[0;34m1\\033[1;37m)\")\n\tinterface = input(\" \\033[1;32m>> \\033[0;37m\")\n\tcomand = \"airmon-ng check kill && airmon-ng start {} \".format(interface)\n\tos.system(comand)\n\tos.system(\"python3 wifi-purple.py\")\nelif WP == 2:",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "\tinterface",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "\tinterface = input(\" \\033[1;32m>> \\033[0;37m\")\n\tcomand = \"airmon-ng check kill && airmon-ng start {} \".format(interface)\n\tos.system(comand)\n\tos.system(\"python3 wifi-purple.py\")\nelif WP == 2:\n    os.system(\"clear\")\n    banner()\n    print(\" \\033[1;37mEnter the interface: (\\033[0;37mwlan\\033[0;31m0\\033[0;37mmon \\033[1;37m| \\033[0;37mwlan\\033[0;34m1\\033[0;37mmon\\033[1;37m)\\033[0m\")\n    interface = input(\" \\033[1;32m>> \\033[0;37m\")\n    comand = \"airmon-ng stop {} \".format(interface)  ",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "\tcomand",
+        "kind": 5,
+        "importPath": "Wifi-Purple.wifi-purple",
+        "description": "Wifi-Purple.wifi-purple",
+        "peekOfCode": "\tcomand = \"airmon-ng check kill && airmon-ng start {} \".format(interface)\n\tos.system(comand)\n\tos.system(\"python3 wifi-purple.py\")\nelif WP == 2:\n    os.system(\"clear\")\n    banner()\n    print(\" \\033[1;37mEnter the interface: (\\033[0;37mwlan\\033[0;31m0\\033[0;37mmon \\033[1;37m| \\033[0;37mwlan\\033[0;34m1\\033[0;37mmon\\033[1;37m)\\033[0m\")\n    interface = input(\" \\033[1;32m>> \\033[0;37m\")\n    comand = \"airmon-ng stop {} \".format(interface)  \n    os.system(comand)",
+        "detail": "Wifi-Purple.wifi-purple",
+        "documentation": {}
+    },
+    {
+        "label": "WifiPurpleApp",
+        "kind": 6,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "class WifiPurpleApp(ctk.CTk):\n    def __init__(self):\n        super().__init__()\n        # --------------------------\n        # Cấu hình cửa sổ\n        # --------------------------\n        self.title(\"WiFi Purple - GUI Controller\")\n        self.geometry(\"1100x700\")\n        self.resizable(True, True)\n        # Load theme",
+        "detail": "run",
+        "documentation": {}
+    }
+]

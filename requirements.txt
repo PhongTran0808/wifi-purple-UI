@@ -1,0 +1,6 @@
+echo customtkinter==5.2.0 > requirements.txt
+echo Pillow==10.3.0 >> requirements.txt
+echo psutil==5.9.5 >> requirements.txt
+echo PyYAML==6.0.1 >> requirements.txt
+echo scapy==2.5.0 >> requirements.txt
+echo pyric==0.1.6.6 >> requirements.txt
