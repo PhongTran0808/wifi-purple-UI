@@ -2,6 +2,9 @@ import os
 import sys
 import customtkinter as ctk
 
+# Import system setup
+from system_setup import auto_setup_if_needed
+
 from controllers.scan_controller import ScanController
 # Import controllers
 from controllers.deauth_controller import DeauthController
@@ -10,10 +13,15 @@ from controllers.handshake_controller import HandshakeController
 
 # Import GUI pages
 from gui.main_app import MainPage
+from gui.dashboard_page import DashboardPage
 from gui.scan_page import ScanPage
+from gui.advanced_scan_page import AdvancedScanPage
 from gui.deauth_page import DeauthPage
 from gui.evil_twin_page import EvilTwinPage
 from gui.handshake_page import HandshakePage
+from gui.help_page import HelpPage
+from gui.settings_page import SettingsPage
+from gui.integrations_page import IntegrationsPage
 
 
 # ===============================
@@ -63,14 +71,14 @@ class WifiPurpleApp(ctk.CTk):
     # ==========================================
     def load_theme(self):
         try:
-            theme_path = os.path.join("assets", "themes", "dark-theme.json")
-            if os.path.exists(theme_path):
-                ctk.set_default_color_theme(theme_path)
-                ctk.set_appearance_mode("dark")
-            else:
-                print("[WARNING] Không tìm thấy file theme, dùng theme mặc định.")
+            # Tạm thời dùng theme mặc định để tránh lỗi
+            ctk.set_default_color_theme("blue")
+            ctk.set_appearance_mode("dark")
+            print("[INFO] Đang dùng theme mặc định")
         except Exception as e:
             print(f"[ERROR] Lỗi load theme: {e}")
+            ctk.set_default_color_theme("blue")
+            ctk.set_appearance_mode("dark")
 
     # ==========================================
     # Load icon
@@ -89,10 +97,15 @@ class WifiPurpleApp(ctk.CTk):
     def init_pages(self):
         pages = {
             "MainPage": MainPage,
+            "DashboardPage": DashboardPage,
             "ScanPage": ScanPage,
+            "AdvancedScanPage": AdvancedScanPage,
             "DeauthPage": DeauthPage,
             "EvilTwinPage": EvilTwinPage,
             "HandshakePage": HandshakePage,
+            "HelpPage": HelpPage,
+            "SettingsPage": SettingsPage,
+            "IntegrationsPage": IntegrationsPage,
         }
 
         for name, PageClass in pages.items():
@@ -115,5 +128,21 @@ class WifiPurpleApp(ctk.CTk):
 # CHẠY CHƯƠNG TRÌNH
 # ===============================
 if __name__ == "__main__":
+    print("🚀 Khởi động WiFi Purple GUI...")
+    
+    # Tự động setup hệ thống nếu cần
+    if not auto_setup_if_needed():
+        print("❌ Setup thất bại. Một số tính năng có thể không hoạt động.")
+        print("Bạn có thể chạy thủ công: sudo python3 system_setup.py")
+        
+        # Hỏi người dùng có muốn tiếp tục không
+        try:
+            choice = input("Tiếp tục chạy app? (y/n): ").lower()
+            if choice != 'y':
+                sys.exit(1)
+        except KeyboardInterrupt:
+            sys.exit(1)
+    
+    print("✓ Khởi động giao diện...")
     app = WifiPurpleApp()
     app.mainloop()

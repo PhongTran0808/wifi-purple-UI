@@ -9,15 +9,23 @@
     },
 
     "tools": {
-        "scan": "Wifi-Purple/scan.py",
-        "deauth": "Wifi-Purple/deauth.py",
-        "evil_twin": "Wifi-Purple/evil_twin.py",
-        "handshake": "Wifi-Purple/handshake.py"
+        "scan": "Wifi-Purple/wifi-purple.py",
+        "deauth": "Wifi-Purple/wifi-purple.py",
+        "evil_twin": "Wifi-Purple/wifi-purple.py",
+        "handshake": "Wifi-Purple/wifi-purple.py"
     },
 
     "settings": {
         "default_interface": "wlan0",
         "monitor_mode": true,
-        "auto_refresh_scan": 5
+        "auto_refresh_scan": 5,
+        "output_path": "/tmp/wifi-purple"
+    },
+    
+    "ui_settings": {
+        "theme": "dark",
+        "dashboard_layout": "default",
+        "auto_refresh_dashboard": true,
+        "show_advanced_features": true
     }
 }
